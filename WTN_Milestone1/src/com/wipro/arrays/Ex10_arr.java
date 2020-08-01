@@ -2,28 +2,30 @@ package com.wipro.arrays;
 
 public class Ex10_arr {
 
+
+
 		public static void main(String[] args) {
 		
-			if (args.length!= 9)
-				System.out.println("Please enter 9 integer numbers");
-
-			int[][] array=new int[3][3];
-			int x=0;
-			for(int i=0; i<array.length;i++) {
-				for(int j=0; j<array[0].length;j++) {
-					array[i][j]=Integer.parseInt(args[x++]);
+			int[] a=new int[] {1,0,1,0,0,1,1}; 
+			int n=a.length,c=0;
+			for(int i=0;i<n;i++)
+			{
+				if(a[i]%2==0)
+				{
+					c++;
+					System.out.print(a[i]+",");
 				}
 			}
-			
-			int max=0;
-			for (int i=0;i<array.length;i++) {
-				for (int j = 0; j < array[0].length; j++) {
-					max=array[i][j]>max?array[i][j]:max;
+			for(int j=0;j<n;j++)
+			{
+				if(a[j]%2 != 0 && c!=n-1)
+				{
+					c++;
+					System.out.print(a[j]+",");
 				}
+				else if(a[j]%2 != 0 && c==n-1)
+					System.out.print(a[j]);
 			}
-				
-			System.out.println("The biggest number in the given array is " + max);
-
 		}
 
 	}

@@ -2,43 +2,31 @@ package com.wipro.arrays;
 
 
 public class Ex9_arr {
+	public static void main(String[] args) {
 	
-public static void main(String[] args) {
-			
-			if (args.length != 4)
-				System.out.println("Please enter 4 integer numbers");
-			
-			int[][] array = new int[2][2];
-			int[][] arrayReversed = new int[2][2];
-			int x = 0;
-			for (int i = 0; i < array.length; i++) {
-				for (int j = 0; j < array[0].length; j++) {
-					array[i][j] = Integer.parseInt(args[x++]);
-				}
-			}		
-			for (int i = 0; i < array.length; i++) {
-				for (int j = 0; j < array[0].length; j++) {
-					arrayReversed[array.length - 1 - i][array.length - 1 - j] = array[i][j];
-				}
-			}
-			System.out.println("The given array is :");
-			for (int i = 0; i < array.length; i++) {
-				for (int j = 0; j < array[0].length; j++) {
-					System.out.print(array[i][j] + "\t");
-				}
-				System.out.println();
-			}
-			
-			System.out.println("The reverse of the array is :");
-			for (int i = 0; i < arrayReversed.length; i++) {
-				for (int j = 0; j < arrayReversed[0].length; j++) {
-					System.out.print(arrayReversed[i][j] + "\t");
-				}
-				System.out.println();
-			}
-
+		int[] a=new int[] {1,10,10,2,10};
+		int n=a.length,k=0,c=0;
+		int[] r=new int[] {0,0,0,0,0};
+		for(int i=0;i<n;i++)
+		{
+			if(a[i]==10)
+				c++;
 		}
-
+		while(k<n && k<(n-c))
+		{
+		for(int i=0;i<n;i++)
+		{
+				if(a[i]!=10)
+				{
+					r[k]=a[i];
+					k++;
+				}
+		}
+		}	
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(r[i]+" ");
+		}
 	}
 
-
+}

@@ -1,74 +1,68 @@
 package com.wipro.encap_abstra;
 
-public class Ex1_ea {
 
-	String name,email;
-	char gender;
-	Ex1_ea(String name,String email,char gender)
-	{
-		name="abcde";
-		email="abc\"sssss\"de@gmail.com";
-		gender='f';
-	}
-	 public String getName() {
-	      return name;
-	   }
 
-	   public char getGender() {
-	      return gender;
-	   }
-	 
-	   public String getEmail() {
-	      return email;
-	   }
-	 
-	   public void setEmail(String email) {
-	      this.email = email;
-	   }
-	   
-	   public static void main(String[] args) {
-		Book b=new Book();
-	}
-	 
-}
-class Book{
-	String namei;
-	double pricei;
-	int qtyi;
-	String authori;
-	
-	Book(String name,double price,int qty,String author){
-		namei=name;
-		pricei=price;
-		qty=6;
-		author="RK Narayan";
-		
-		
-	}
-	public String getName() {
-	      return name;
-	   }
-	 
-	   public String getAuthor() {
-	      return author; 
-	   }
-	 
-	   public double getPrice() {
-	      return price;
-	   }
-	  
-	   p
-	   
-	      ublic void setPrice(double price) {
-	      this.price = price;
-	   }
-	  	   public int getQty() {
-	      return qty;
-	   }
-	  
-	   public void setQty(int qty) {
-	      this.qty = qty;
-	   }
-	 
-}
-
+class Author {
+	      public static String email;
+	     public static char gender;
+	      public static String name;
+	      Author(String n,String e,char g)
+	      {
+	          name=n;
+	          email=e;
+	          gender=g;
+	      }
+	      
+	      
+	  }
+	  class Book{
+	      String name1,author;
+	      double price;
+	      int qtyInStock;
+	      Book(String n1)
+	      {
+	          name1=n1;
+	          
+	      }
+	      public void setPrice()
+	      {
+	          price=100;
+	      }
+	      public double getPrice()
+	      {
+	          return price;
+	      }
+	      public void setQtyInStock()
+	      {
+	          qtyInStock=10;
+	      }
+	      public int getQtyInStock()
+	      {
+	          return qtyInStock;
+	      }
+	      public String getName()
+	      {
+	          return name1;
+	      }
+	     public void getAuthor()
+	      {
+	         System.out.println("The name of the author is :"+Author.name);
+	         System.out.println("The email id is :"+Author.email);
+	         System.out.println("The gender is :"+Author.gender);
+	      }
+	      
+	  }
+	  class Ex1_ea{
+	      public static void main(String args[])
+	      {
+	          Book b=new Book("Family & friends");
+	          Author ob=new Author("RK Narayan","Narayan@gmail.com",'m');
+	          b.setPrice();
+	          b.setQtyInStock();
+	          System.out.println("The name of the book is :"+b.getName());
+	          System.out.println("The price of the book is :"+b.getPrice());
+	          System.out.println("The stock is :"+b.getQtyInStock());
+	          b.getAuthor();
+	          
+	      }
+	  }
